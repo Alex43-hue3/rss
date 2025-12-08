@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Semana 14 de la NFL</title>
     <link>https://www.youtube.com/</link>
     <description>Contenido y resúmenes de la NFL</description>
     <language>es-mx</language>
 
-    <!-- Enlace self requerido por el validador -->
-    <atom:link href="https://tusitio.com/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom"/>
+    <!-- Autorreferencia correcta -->
+    <atom:link href="https://alex43-hue3.github.io/rss/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
       <title>Houston Texans vs. Kansas City Chiefs</title>
