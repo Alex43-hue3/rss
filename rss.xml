@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Semana 14 de la NFL</title>
+    <link>https://www.youtube.com/</link>
+    <description>Contenido y resúmenes de la NFL</description>
+    <language>es-mx</language>
+
+    <!-- Enlace self requerido por el validador -->
+    <atom:link href="https://tusitio.com/rss.xml" rel="self" type="application/rss+xml" xmlns:atom="http://www.w3.org/2005/Atom"/>
+
+    <item>
+      <title>Houston Texans vs. Kansas City Chiefs</title>
+      <link>https://www.youtube.com/watch?v=visBtPtw3aw</link>
+      <guid>https://www.youtube.com/watch?v=visBtPtw3aw</guid>
+      <description>
+        Revive las mejores jugadas con el resumen NFL de hoy y los momentos más emocionantes de la Semana 14 de la NFL 2025. Aquí te traemos los highlights de este duelo entre los Houston Texans y los Kansas City Chiefs, un enfrentamiento de alto voltaje con dos ofensivas explosivas que buscan sumar una victoria clave rumbo al cierre de la temporada.
+      </description>
+      <pubDate>Mon, 08 Dec 2025 12:00:00 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss>
