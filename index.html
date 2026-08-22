@@ -8,1160 +8,387 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="description"
-        content="PULSO — descubre personas, marcas, negocios y proyectos que están creciendo."
+    <title>NEXORA — Tu presencia digital</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
     >
 
-    <title>PULSO — Hazte visible</title>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
 
-    <!-- ==================================================
-         CURSOR / EFECTOS
-    ================================================== -->
+<header class="main-header">
 
-    <div class="cursor-glow"></div>
+    <a href="index.html" class="brand">
+        <span class="brand-symbol">N</span>
+        <span>NEXORA</span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="#funciones">Funciones</a>
+        <a href="#creadores">Creadores</a>
+        <a href="#negocios">Negocios</a>
+    </nav>
+
+    <div class="header-actions">
+        <a
+            href="dashboard.html"
+            class="btn btn-outline"
+        >
+            Mi espacio
+        </a>
+
+        <a
+            href="dashboard.html"
+            class="btn btn-primary"
+        >
+            Comenzar
+        </a>
+    </div>
+
+</header>
 
 
-    <!-- ==================================================
-         HEADER
-    ================================================== -->
+<main>
 
-    <header class="site-header">
+<section class="hero">
 
-        <div class="header-inner">
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
 
-            <a href="#inicio" class="brand">
+    <div class="hero-content">
 
-                <span class="brand-mark">
+        <div class="eyebrow">
+            TU PRESENCIA DIGITAL. ELEVADA.
+        </div>
 
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <h1>
+            Todo lo que eres.
+            <span>En un solo lugar.</span>
+        </h1>
 
-                </span>
+        <p>
+            Crea una identidad digital profesional para tu marca,
+            negocio o contenido. Comparte tus redes, proyectos,
+            servicios y formas de contacto desde un solo enlace.
+        </p>
 
-                <span class="brand-name">
-                    PULSO
-                </span>
+        <div class="hero-buttons">
 
+            <a
+                href="dashboard.html"
+                class="btn btn-primary btn-large"
+            >
+                Crear mi espacio
+                <span>→</span>
             </a>
 
-
-            <nav class="main-nav">
-
-                <a href="#descubrir">
-                    Descubrir
-                </a>
-
-                <a href="#tendencias">
-                    Tendencias
-                </a>
-
-                <a href="#categorias">
-                    Explorar
-                </a>
-
-                <a href="#crecer">
-                    Crecer
-                </a>
-
-            </nav>
-
-
-            <div class="header-actions">
-
-                <button
-                    class="header-search"
-                    id="openSearch"
-                    aria-label="Buscar"
-                >
-                    <span>⌕</span>
-                </button>
-
-                <button
-                    class="grow-button"
-                    id="headerGrow"
-                >
-                    Quiero crecer
-                    <span>↗</span>
-                </button>
-
-                <button
-                    class="mobile-menu-button"
-                    id="mobileMenuButton"
-                    aria-label="Abrir menú"
-                >
-                    <span></span>
-                    <span></span>
-                </button>
-
-            </div>
+            <a
+                href="perfil.html"
+                class="btn btn-ghost btn-large"
+            >
+                Ver ejemplo
+            </a>
 
         </div>
 
-    </header>
-
-
-    <!-- ==================================================
-         SEARCH OVERLAY
-    ================================================== -->
-
-    <div
-        class="search-overlay"
-        id="searchOverlay"
-    >
-
-        <div class="search-container">
-
-            <button
-                class="close-search"
-                id="closeSearch"
-            >
-                ×
-            </button>
-
-            <span class="search-label">
-                BUSCAR EN PULSO
-            </span>
-
-            <h2>
-                ¿Qué quieres descubrir?
-            </h2>
-
-            <div class="big-search">
-
-                <span>⌕</span>
-
-                <input
-                    type="text"
-                    id="globalSearch"
-                    placeholder="Busca un creador, negocio, marca..."
-                    autocomplete="off"
-                >
-
-                <kbd>
-                    ENTER
-                </kbd>
-
-            </div>
-
-            <div
-                class="search-results"
-                id="searchResults"
-            ></div>
-
+        <div class="hero-note">
+            ✦ Sin servidor para comenzar · Fácil de usar · Responsive
         </div>
 
     </div>
 
 
-    <!-- ==================================================
-         MOBILE NAV
-    ================================================== -->
-
-    <div
-        class="mobile-nav"
-        id="mobileNav"
-    >
-
-        <button
-            class="mobile-close"
-            id="mobileClose"
-        >
-            ×
-        </button>
-
-        <span class="mobile-nav-label">
-            PULSO
-        </span>
-
-        <a href="#descubrir">
-            Descubrir
-        </a>
-
-        <a href="#tendencias">
-            Tendencias
-        </a>
-
-        <a href="#categorias">
-            Explorar
-        </a>
-
-        <a href="#crecer">
-            Quiero crecer
-        </a>
-
-    </div>
-
-
-    <!-- ==================================================
-         HERO
-    ================================================== -->
-
-    <main id="inicio">
-
-        <section class="hero">
-
-            <div class="hero-grid"></div>
-
-            <div class="hero-orb orb-one"></div>
-            <div class="hero-orb orb-two"></div>
-
-            <div class="hero-content">
-
-                <div class="hero-kicker">
-
-                    <span class="pulse-dot"></span>
-
-                    EL LUGAR DONDE LAS COSAS EMPIEZAN
-
-                </div>
-
-
-                <h1>
-
-                    Todos tienen algo
-                    <br>
-
-                    que mostrar.
-
-                    <em>
-                        No todos logran
-                        <span>ser descubiertos.</span>
-                    </em>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    PULSO conecta a las personas que están buscando
-                    con las personas, marcas, negocios y proyectos
-                    que están construyendo algo increíble.
-
-                </p>
-
-
-                <div class="hero-actions">
-
-                    <a
-                        href="#descubrir"
-                        class="primary-action"
-                    >
-                        <span>
-                            Descubrir
-                        </span>
-
-                        <b>
-                            →
-                        </b>
-                    </a>
-
-
-                    <button
-                        class="secondary-action"
-                        id="heroGrow"
-                    >
-                        Quiero crecer
-                        <span>
-                            ↗
-                        </span>
-                    </button>
-
-                </div>
-
-
-                <div class="hero-proof">
-
-                    <div class="proof-item">
-
-                        <strong>
-                            01
-                        </strong>
-
-                        <span>
-                            Descubre
-                        </span>
-
-                    </div>
-
-
-                    <div class="proof-line"></div>
-
-
-                    <div class="proof-item">
-
-                        <strong>
-                            02
-                        </strong>
-
-                        <span>
-                            Conecta
-                        </span>
-
-                    </div>
-
-
-                    <div class="proof-line"></div>
-
-
-                    <div class="proof-item">
-
-                        <strong>
-                            03
-                        </strong>
-
-                        <span>
-                            Crece
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="hero-bottom">
-
-                <span>
-                    DESLIZA PARA DESCUBRIR
-                </span>
-
-                <span class="scroll-line"></span>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             LIVE BAR
-        ================================================== -->
-
-        <section class="live-bar">
-
-            <div class="live-inner">
-
-                <span class="live-label">
-
-                    <span></span>
-
-                    PULSO AHORA
-
-                </span>
-
-                <div class="live-track">
-
-                    <div>
-                        🎮 Nova Gaming está creciendo
-                    </div>
-
-                    <div>
-                        🎵 Zero Beat acaba de aparecer
-                    </div>
-
-                    <div>
-                        🍔 Café Central fue descubierto
-                    </div>
-
-                    <div>
-                        🚀 Pixel Studio está en tendencia
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             DISCOVER
-        ================================================== -->
-
-        <section
-            class="discover-section section"
-            id="descubrir"
-        >
-
-            <div class="section-header">
-
-                <div>
-
-                    <span class="section-number">
-                        01 / DESCUBRIR
-                    </span>
-
-                    <h2>
-                        Hay algo
-                        <span>
-                            esperándote.
-                        </span>
-                    </h2>
-
-                </div>
-
-                <p>
-                    Explora personas, negocios y proyectos
-                    que podrían convertirse en tu próximo
-                    descubrimiento.
-                </p>
-
-            </div>
-
-
-            <div class="discover-layout">
-
-                <div class="featured-discovery">
-
-                    <div class="feature-image">
-
-                        <div class="feature-gradient"></div>
-
-                        <span class="feature-tag">
-                            🔥 EN TENDENCIA
-                        </span>
-
-                        <div class="feature-symbol">
-                            🎮
-                        </div>
-
-                        <div class="feature-info">
-
-                            <span>
-                                GAMING · STREAMER
-                            </span>
-
-                            <h3>
-                                Nova Gaming
-                            </h3>
-
-                            <p>
-                                Construyendo una comunidad
-                                un stream a la vez.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="feature-footer">
-
-                        <div>
-
-                            <span>
-                                +28% ESTA SEMANA
-                            </span>
-
-                            <strong>
-                                12.4K personas lo descubrieron
-                            </strong>
-
-                        </div>
-
-                        <button
-                            class="arrow-button"
-                            data-profile="nova"
-                        >
-                            →
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <div class="side-discoveries">
-
-                    <article
-                        class="mini-discovery"
-                        data-profile="luna"
-                    >
-
-                        <div class="mini-icon">
-                            🎥
-                        </div>
-
-                        <div class="mini-content">
-
-                            <span>
-                                CREADORA
-                            </span>
-
-                            <h3>
-                                Luna Creator
-                            </h3>
-
-                            <p>
-                                Lifestyle · Entretenimiento
-                            </p>
-
-                        </div>
-
-                        <span class="mini-arrow">
-                            ↗
-                        </span>
-
-                    </article>
-
-
-                    <article
-                        class="mini-discovery"
-                        data-profile="central"
-                    >
-
-                        <div class="mini-icon">
-                            ☕
-                        </div>
-
-                        <div class="mini-content">
-
-                            <span>
-                                NEGOCIO
-                            </span>
-
-                            <h3>
-                                Café Central
-                            </h3>
-
-                            <p>
-                                Café · Postres · Cadereyta
-                            </p>
-
-                        </div>
-
-                        <span class="mini-arrow">
-                            ↗
-                        </span>
-
-                    </article>
-
-
-                    <article
-                        class="mini-discovery"
-                        data-profile="zero"
-                    >
-
-                        <div class="mini-icon">
-                            🎵
-                        </div>
-
-                        <div class="mini-content">
-
-                            <span>
-                                MÚSICA
-                            </span>
-
-                            <h3>
-                                Zero Beat
-                            </h3>
-
-                            <p>
-                                Artista independiente
-                            </p>
-
-                        </div>
-
-                        <span class="mini-arrow">
-                            ↗
-                        </span>
-
-                    </article>
-
-
-                    <button
-                        class="discover-more"
-                        id="discoverMore"
-                    >
-                        Explorar todo PULSO
-                        <span>
-                            →
-                        </span>
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             TRENDING
-        ================================================== -->
-
-        <section
-            class="trending-section section"
-            id="tendencias"
-        >
-
-            <div class="section-header">
-
-                <div>
-
-                    <span class="section-number">
-                        02 / AHORA
-                    </span>
-
-                    <h2>
-                        Lo que está
-                        <span>
-                            haciendo ruido.
-                        </span>
-                    </h2>
-
-                </div>
-
-                <button
-                    class="outline-button"
-                    id="viewTrending"
-                >
-                    Ver todo →
-                </button>
-
-            </div>
-
-
-            <div
-                class="trending-grid"
-                id="trendingGrid"
-            ></div>
-
-        </section>
-
-
-        <!-- ==================================================
-             CATEGORIES
-        ================================================== -->
-
-        <section
-            class="categories-section section"
-            id="categorias"
-        >
-
-            <div class="section-header">
-
-                <div>
-
-                    <span class="section-number">
-                        03 / EXPLORAR
-                    </span>
-
-                    <h2>
-                        Encuentra
-                        <span>
-                            tu mundo.
-                        </span>
-                    </h2>
-
-                </div>
-
-                <p>
-                    No importa lo que busques.
-                    Probablemente esté aquí.
-                </p>
-
-            </div>
-
-
-            <div class="category-marquee">
-
-                <button
-                    class="category-pill active"
-                    data-category="Todos"
-                >
-                    Todo
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Creadores"
-                >
-                    Creadores
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Negocios"
-                >
-                    Negocios
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Gaming"
-                >
-                    Gaming
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Música"
-                >
-                    Música
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Arte"
-                >
-                    Arte
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Tecnología"
-                >
-                    Tecnología
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Cine"
-                >
-                    Cine
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Servicios"
-                >
-                    Servicios
-                </button>
-
-                <button
-                    class="category-pill"
-                    data-category="Proyectos"
-                >
-                    Proyectos
-                </button>
-
-            </div>
-
-
-            <div
-                class="category-results"
-                id="categoryResults"
-            ></div>
-
-        </section>
-
-
-        <!-- ==================================================
-             GROW
-        ================================================== -->
-
-        <section
-            class="grow-section"
-            id="crecer"
-        >
-
-            <div class="grow-background"></div>
-
-            <div class="grow-content">
-
-                <span class="section-number">
-                    04 / CRECER
-                </span>
-
-                <h2>
-
-                    Lo que haces
-                    <br>
-
-                    <span>
-                        merece ser visto.
-                    </span>
-
-                </h2>
-
-                <p>
-
-                    Ya sea que tengas un negocio, seas creador,
-                    artista, streamer o estés construyendo algo
-                    completamente nuevo, PULSO te ayuda a ponerte
-                    frente a las personas correctas.
-
-                </p>
-
-
-                <div class="grow-features">
-
-                    <div>
-
-                        <span>
-                            01
-                        </span>
-
-                        <strong>
-                            Hazte visible
-                        </strong>
-
-                        <p>
-                            Presenta lo que haces
-                            de una manera que destaque.
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            02
-                        </span>
-
-                        <strong>
-                            Llega más lejos
-                        </strong>
-
-                        <p>
-                            Aparece frente a personas
-                            interesadas en lo que haces.
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            03
-                        </span>
-
-                        <strong>
-                            Mide tu crecimiento
-                        </strong>
-
-                        <p>
-                            Descubre cuántas personas
-                            están llegando a ti.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <button
-                    class="grow-main-button"
-                    id="mainGrowButton"
-                >
-                    <span>
-                        Quiero crecer en PULSO
-                    </span>
-
-                    <b>
-                        ↗
-                    </b>
-
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- ==================================================
-             FINAL CTA
-        ================================================== -->
-
-        <section class="final-section">
-
-            <div class="final-content">
-
-                <span class="final-small">
-                    PULSO
-                </span>
-
-                <h2>
-
-                    Descubrir.
-                    <br>
-
-                    Conectar.
-                    <br>
-
-                    <span>
-                        Crecer.
-                    </span>
-
-                </h2>
-
-                <p>
-                    El siguiente gran descubrimiento
-                    podría ser tuyo.
-                </p>
-
-                <a
-                    href="#descubrir"
-                    class="final-button"
-                >
-                    Explorar PULSO →
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ==================================================
-         FOOTER
-    ================================================== -->
-
-    <footer class="site-footer">
-
-        <div class="footer-top">
-
-            <div class="footer-brand">
-
-                <a href="#inicio" class="brand">
-
-                    <span class="brand-mark">
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </span>
-
-                    <span class="brand-name">
-                        PULSO
-                    </span>
-
-                </a>
-
-                <p>
-                    Donde la gente que está creciendo
-                    se hace visible.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <span>
-                    EXPLORA
-                </span>
-
-                <a href="#descubrir">
-                    Descubrir
-                </a>
-
-                <a href="#tendencias">
-                    Tendencias
-                </a>
-
-                <a href="#categorias">
-                    Categorías
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <span>
-                    CRECE
-                </span>
-
-                <a href="#crecer">
-                    Quiero crecer
-                </a>
-
-                <a href="#">
-                    Cómo funciona
-                </a>
-
-                <a href="#">
-                    Precios
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <span>
-                    PULSO
-                </span>
-
-                <a href="#">
-                    Sobre nosotros
-                </a>
-
-                <a href="#">
-                    Contacto
-                </a>
-
-                <a href="#">
-                    Privacidad
-                </a>
-
-            </div>
-
+    <div class="hero-card">
+
+        <div class="floating-card card-top">
+            <span>●</span>
+            Perfil activo
         </div>
 
+        <div class="profile-preview">
 
-        <div class="footer-bottom">
+            <div class="preview-cover"></div>
 
-            <span>
-                © 2026 PULSO
-            </span>
-
-            <span>
-                Hecho para quienes están construyendo algo.
-            </span>
-
-        </div>
-
-    </footer>
-
-
-    <!-- ==================================================
-         PROFILE MODAL
-    ================================================== -->
-
-    <div
-        class="modal-overlay"
-        id="profileModal"
-    >
-
-        <div class="profile-modal">
-
-            <button
-                class="modal-close"
-                id="closeProfileModal"
-            >
-                ×
-            </button>
-
-            <span class="modal-number">
-                PULSO / CRECER
-            </span>
-
-            <div class="modal-icon">
-                ↗
+            <div class="preview-avatar">
+                A
             </div>
 
-            <h2>
-                Tu proyecto
-                <span>
-                    merece crecer.
-                </span>
-            </h2>
+            <h3>Alex Creator</h3>
+
+            <span class="preview-user">
+                @alexcreator
+            </span>
 
             <p>
-
-                Estamos preparando el sistema de perfiles
-                para que puedas presentar tu negocio, canal,
-                marca o proyecto y empezar a recibir visitas.
-
+                Creador de contenido · Gaming · Tecnología
             </p>
 
-            <div class="modal-coming">
-                PRÓXIMAMENTE
+            <div class="preview-button">
+                Instagram
             </div>
 
-            <button
-                class="modal-button"
-                id="modalCloseButton"
-            >
-                Seguir explorando
-            </button>
+            <div class="preview-button">
+                TikTok
+            </div>
 
+            <div class="preview-button">
+                Mi canal de YouTube
+            </div>
+
+            <div class="preview-button highlight">
+                Contactarme
+            </div>
+
+        </div>
+
+        <div class="floating-card card-bottom">
+            <strong>+24%</strong>
+            visitas este mes
         </div>
 
     </div>
 
+</section>
 
-    <!-- ==================================================
-         PROFILE DETAIL MODAL
-    ================================================== -->
 
-    <div
-        class="modal-overlay"
-        id="detailModal"
+<section
+    id="funciones"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <span class="eyebrow">
+            UNA PLATAFORMA. MUCHAS POSIBILIDADES.
+        </span>
+
+        <h2>
+            Tu presencia digital,
+            <span>sin complicaciones.</span>
+        </h2>
+
+        <p>
+            NEXORA reúne las herramientas esenciales para que
+            las personas encuentren, conozcan y contacten contigo.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <article class="feature-card">
+            <div class="feature-icon">✦</div>
+
+            <h3>Perfil profesional</h3>
+
+            <p>
+                Presenta quién eres, qué haces y qué te diferencia
+                mediante una página diseñada para ti.
+            </p>
+        </article>
+
+
+        <article class="feature-card">
+            <div class="feature-icon">↗</div>
+
+            <h3>Todos tus enlaces</h3>
+
+            <p>
+                Instagram, TikTok, YouTube, Twitch, WhatsApp,
+                tiendas, portafolio y mucho más.
+            </p>
+        </article>
+
+
+        <article class="feature-card">
+            <div class="feature-icon">◉</div>
+
+            <h3>Conoce a tu audiencia</h3>
+
+            <p>
+                Consulta visitas, clics y comportamiento para
+                descubrir qué está funcionando.
+            </p>
+        </article>
+
+
+        <article class="feature-card">
+            <div class="feature-icon">◆</div>
+
+            <h3>Crece contigo</h3>
+
+            <p>
+                La plataforma está preparada para agregar nuevas
+                herramientas conforme crezca tu proyecto.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section
+    id="creadores"
+    class="split-section"
+>
+
+    <div class="split-content">
+
+        <span class="eyebrow">PARA CREADORES</span>
+
+        <h2>
+            Convierte tus seguidores
+            en una <span>comunidad.</span>
+        </h2>
+
+        <p>
+            Streamers, TikTokers, YouTubers, músicos, artistas,
+            fotógrafos, influencers y cualquier persona que tenga
+            algo que compartir.
+        </p>
+
+        <ul class="check-list">
+            <li>✓ Redes sociales</li>
+            <li>✓ Portafolio</li>
+            <li>✓ Proyectos</li>
+            <li>✓ Contacto profesional</li>
+        </ul>
+
+        <a
+            href="dashboard.html"
+            class="btn btn-primary"
+        >
+            Crear perfil de creador →
+        </a>
+
+    </div>
+
+    <div class="split-visual creator-visual">
+
+        <div class="visual-box">
+            <span>CREATOR</span>
+            <strong>BUILD YOUR<br>OWN UNIVERSE.</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section
+    id="negocios"
+    class="split-section reverse"
+>
+
+    <div class="split-content">
+
+        <span class="eyebrow">PARA NEGOCIOS</span>
+
+        <h2>
+            Tu negocio merece
+            algo <span>profesional.</span>
+        </h2>
+
+        <p>
+            Reúne tus productos, servicios, redes, ubicación,
+            WhatsApp y métodos de contacto en una sola página.
+        </p>
+
+        <ul class="check-list">
+            <li>✓ Información del negocio</li>
+            <li>✓ Servicios</li>
+            <li>✓ Redes sociales</li>
+            <li>✓ Contacto directo</li>
+        </ul>
+
+        <a
+            href="dashboard.html"
+            class="btn btn-primary"
+        >
+            Crear perfil de negocio →
+        </a>
+
+    </div>
+
+    <div class="split-visual business-visual">
+
+        <div class="visual-box">
+            <span>BUSINESS</span>
+            <strong>MAKE YOUR<br>BRAND MATTER.</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div>
+
+        <span class="eyebrow">
+            EL SIGUIENTE PASO ES TUYO
+        </span>
+
+        <h2>
+            Tu nombre.
+            <span>Tu marca. Tu espacio.</span>
+        </h2>
+
+        <p>
+            Empieza a construir tu identidad digital.
+        </p>
+
+    </div>
+
+    <a
+        href="dashboard.html"
+        class="btn btn-primary btn-large"
     >
+        Crear mi espacio →
+    </a>
 
-        <div class="detail-modal">
+</section>
 
-            <button
-                class="modal-close"
-                id="closeDetailModal"
-            >
-                ×
-            </button>
+</main>
 
-            <div
-                class="detail-visual"
-                id="detailVisual"
-            >
-                🎮
-            </div>
 
-            <span
-                class="detail-category"
-                id="detailCategory"
-            >
-                GAMING
-            </span>
+<footer class="main-footer">
 
-            <h2 id="detailName">
-                Nova Gaming
-            </h2>
-
-            <p id="detailDescription">
-                Construyendo una comunidad un stream a la vez.
-            </p>
-
-            <div class="detail-stats">
-
-                <div>
-                    <strong id="detailVisits">
-                        12.4K
-                    </strong>
-
-                    <span>
-                        descubiertos
-                    </span>
-                </div>
-
-                <div>
-                    <strong>
-                        +28%
-                    </strong>
-
-                    <span>
-                        crecimiento
-                    </span>
-                </div>
-
-            </div>
-
-            <button
-                class="modal-button"
-                id="detailAction"
-            >
-                Próximamente →
-            </button>
-
-        </div>
-
+    <div class="brand">
+        <span class="brand-symbol">N</span>
+        NEXORA
     </div>
 
+    <p>
+        Tu presencia digital, elevada.
+    </p>
 
-    <script src="app.js"></script>
+    <span>
+        © 2026 NEXORA
+    </span>
+
+</footer>
+
+
+<script src="js/app.js"></script>
 
 </body>
 </html>
