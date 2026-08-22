@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Editar perfil — NEXORA</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/perfil.css">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<header class="editor-header">
+
+    <a
+        href="dashboard.html"
+        class="brand"
+    >
+
+        <span class="brand-symbol">
+            N
+        </span>
+
+        NEXORA
+
+    </a>
+
+
+    <div class="editor-actions">
+
+        <a
+            href="dashboard.html"
+            class="btn btn-outline"
+        >
+            Cancelar
+        </a>
+
+        <button
+            id="saveProfile"
+            class="btn btn-primary"
+        >
+            Guardar cambios
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="editor-main">
+
+
+    <div class="editor-heading">
+
+        <span class="eyebrow">
+            PERSONALIZA TU ESPACIO
+        </span>
+
+        <h1>
+            Edita tu perfil.
+        </h1>
+
+        <p>
+            Haz que las personas sepan quién eres,
+            qué haces y dónde encontrarte.
+        </p>
+
+    </div>
+
+
+    <div class="editor-layout">
+
+
+        <section class="editor-panel">
+
+
+            <div class="editor-section">
+
+                <div class="editor-section-heading">
+
+                    <div>
+
+                        <span class="card-label">
+                            INFORMACIÓN PRINCIPAL
+                        </span>
+
+                        <h2>
+                            Tu identidad
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="type-selector">
+
+                    <button
+                        type="button"
+                        class="type-option active"
+                        data-type="creator"
+                    >
+                        <span>✦</span>
+
+                        <div>
+                            <strong>
+                                Creador
+                            </strong>
+
+                            <small>
+                                Contenido, streaming,
+                                arte, etc.
+                            </small>
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="type-option"
+                        data-type="business"
+                    >
+                        <span>◆</span>
+
+                        <div>
+                            <strong>
+                                Negocio
+                            </strong>
+
+                            <small>
+                                Marca, tienda,
+                                servicios, etc.
+                            </small>
+                        </div>
+
+                    </button>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label class="form-field">
+
+                        <span>
+                            Nombre / marca
+                        </span>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Ej. Alex Creator"
+                        >
+
+                    </label>
+
+
+                    <label class="form-field">
+
+                        <span>
+                            Usuario
+                        </span>
+
+                        <div class="username-input">
+
+                            <b>@</b>
+
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder="alexcreator"
+                            >
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="form-field full">
+
+                        <span>
+                            Descripción
+                        </span>
+
+                        <textarea
+                            id="bio"
+                            rows="4"
+                            maxlength="160"
+                            placeholder="Cuéntale al mundo quién eres..."
+                        ></textarea>
+
+                        <small>
+                            Máximo 160 caracteres.
+                        </small>
+
+                    </label>
+
+
+                    <label class="form-field">
+
+                        <span>
+                            Categoría
+                        </span>
+
+                        <select id="category">
+
+                            <option>
+                                Creador de contenido
+                            </option>
+
+                            <option>
+                                Streamer
+                            </option>
+
+                            <option>
+                                TikToker
+                            </option>
+
+                            <option>
+                                YouTuber
+                            </option>
+
+                            <option>
+                                Artista
+                            </option>
+
+                            <option>
+                                Fotógrafo
+                            </option>
+
+                            <option>
+                                Marca personal
+                            </option>
+
+                            <option>
+                                Tienda
+                            </option>
+
+                            <option>
+                                Restaurante
+                            </option>
+
+                            <option>
+                                Servicios
+                            </option>
+
+                            <option>
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label class="form-field">
+
+                        <span>
+                            Ubicación
+                        </span>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="México"
+                        >
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="editor-section">
+
+                <div class="editor-section-heading">
+
+                    <div>
+
+                        <span class="card-label">
+                            IMÁGENES
+                        </span>
+
+                        <h2>
+                            Dale personalidad
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="image-inputs">
+
+                    <label class="image-input">
+
+                        <span class="image-input-icon">
+                            ◎
+                        </span>
+
+                        <strong>
+                            Foto de perfil
+                        </strong>
+
+                        <small>
+                            Pega una URL de imagen.
+                        </small>
+
+                        <input
+                            type="url"
+                            id="avatar"
+                            placeholder="https://..."
+                        >
+
+                    </label>
+
+
+                    <label class="image-input">
+
+                        <span class="image-input-icon">
+                            ▰
+                        </span>
+
+                        <strong>
+                            Portada
+                        </strong>
+
+                        <small>
+                            Imagen para el encabezado.
+                        </small>
+
+                        <input
+                            type="url"
+                            id="cover"
+                            placeholder="https://..."
+                        >
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="editor-section">
+
+                <div class="editor-section-heading">
+
+                    <div>
+
+                        <span class="card-label">
+                            ENLACES
+                        </span>
+
+                        <h2>
+                            Tus puntos de conexión
+                        </h2>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="addLink"
+                        class="btn btn-outline"
+                    >
+                        + Agregar enlace
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="linksEditor"
+                    class="links-editor"
+                ></div>
+
+            </div>
+
+
+        </section>
+
+
+        <aside class="live-preview-panel">
+
+            <div class="preview-heading">
+
+                <span>
+                    VISTA PREVIA
+                </span>
+
+                <a
+                    href="perfil.html"
+                    target="_blank"
+                >
+                    Abrir perfil ↗
+                </a>
+
+            </div>
+
+
+            <div
+                class="profile-live-preview"
+                id="livePreview"
+            >
+
+                <div
+                    class="live-cover"
+                    id="previewCover"
+                ></div>
+
+
+                <div
+                    class="live-avatar"
+                    id="previewAvatar"
+                >
+                    A
+                </div>
+
+
+                <h3 id="previewName">
+                    Alex Creator
+                </h3>
+
+
+                <span
+                    class="live-username"
+                    id="previewUsername"
+                >
+                    @alexcreator
+                </span>
+
+
+                <p id="previewBio">
+                    Creador de contenido · Gaming · Tecnología
+                </p>
+
+
+                <div
+                    id="previewLinks"
+                    class="preview-links"
+                ></div>
+
+            </div>
+
+        </aside>
+
+
+    </div>
+
+</main>
+
+
+<div
+    class="toast"
+    id="editorToast"
+>
+
+    <span>✓</span>
+
+    <p>
+        Perfil guardado correctamente
+    </p>
+
+</div>
+
+
+<script src="js/editar-perfil.js"></script>
+
+</body>
+</html>
