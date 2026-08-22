@@ -1,147 +1,190 @@
-/* =========================================
-   TOPSPOT
-   APP.JS
-========================================= */
-
 "use strict";
 
 
-/* =========================================
-   DATOS TEMPORALES
-========================================= */
+/* ==================================================
+   PULSO — DATOS DEMO
+================================================== */
 
 const profiles = [
 
     {
-        id: 1,
+        id: "nova",
         name: "Nova Gaming",
         category: "Gaming",
         icon: "🎮",
-        description: "Streamer y creador de contenido enfocado en videojuegos.",
-        visits: 12840,
-        trending: true,
-        sponsored: true
+        description:
+            "Streamer y creador de contenido construyendo una comunidad un stream a la vez.",
+        visits: 12400,
+        growth: "+28%",
+        trending: true
     },
 
     {
-        id: 2,
+        id: "luna",
         name: "Luna Creator",
         category: "Creadores",
         icon: "🎥",
-        description: "Creadora de contenido, lifestyle y entretenimiento.",
+        description:
+            "Lifestyle, entretenimiento y contenido para una comunidad que sigue creciendo.",
         visits: 9640,
-        trending: true,
-        sponsored: true
+        growth: "+21%",
+        trending: true
     },
 
     {
-        id: 3,
+        id: "central",
         name: "Café Central",
         category: "Negocios",
         icon: "☕",
-        description: "Café, postres y desayunos para disfrutar con amigos.",
+        description:
+            "Café, postres y desayunos. Un nuevo lugar para descubrir en Cadereyta.",
         visits: 8230,
-        trending: true,
-        sponsored: true
+        growth: "+18%",
+        trending: true
     },
 
     {
-        id: 4,
-        name: "Dark Wolf",
-        category: "TikTok",
-        icon: "🐺",
-        description: "Contenido de entretenimiento y tendencias.",
-        visits: 7140,
-        trending: false,
-        sponsored: false
-    },
-
-    {
-        id: 5,
-        name: "Pixel Studio",
-        category: "Arte",
-        icon: "🎨",
-        description: "Diseño gráfico, ilustración y proyectos digitales.",
-        visits: 5980,
-        trending: false,
-        sponsored: false
-    },
-
-    {
-        id: 6,
+        id: "zero",
         name: "Zero Beat",
         category: "Música",
         icon: "🎵",
-        description: "Proyecto musical independiente y productor.",
+        description:
+            "Artista independiente creando música sin esperar a que alguien le dé permiso.",
+        visits: 7140,
+        growth: "+17%",
+        trending: true
+    },
+
+    {
+        id: "pixel",
+        name: "Pixel Studio",
+        category: "Arte",
+        icon: "🎨",
+        description:
+            "Diseño, ilustración y creatividad digital.",
+        visits: 5980,
+        growth: "+13%",
+        trending: false
+    },
+
+    {
+        id: "tech",
+        name: "Nexora Tech",
+        category: "Tecnología",
+        icon: "⚡",
+        description:
+            "Proyecto tecnológico enfocado en soluciones digitales.",
+        visits: 5120,
+        growth: "+11%",
+        trending: false
+    },
+
+    {
+        id: "wolf",
+        name: "Dark Wolf",
+        category: "Creadores",
+        icon: "🐺",
+        description:
+            "Contenido de entretenimiento y tendencias.",
         visits: 4870,
-        trending: false,
-        sponsored: false
+        growth: "+9%",
+        trending: false
+    },
+
+    {
+        id: "cine",
+        name: "Cine Norte",
+        category: "Cine",
+        icon: "🎬",
+        description:
+            "Historias independientes creadas desde el norte de México.",
+        visits: 3980,
+        growth: "+8%",
+        trending: false
+    },
+
+    {
+        id: "urban",
+        name: "Urban District",
+        category: "Negocios",
+        icon: "👕",
+        description:
+            "Moda urbana, diseño y cultura.",
+        visits: 3540,
+        growth: "+7%",
+        trending: false
+    },
+
+    {
+        id: "launch",
+        name: "Project Alpha",
+        category: "Proyectos",
+        icon: "🚀",
+        description:
+            "Una idea que apenas está comenzando.",
+        visits: 2870,
+        growth: "+6%",
+        trending: false
     }
 
 ];
 
 
-/* =========================================
+/* ==================================================
    ELEMENTOS
-========================================= */
+================================================== */
 
-const searchButton =
-    document.getElementById("searchButton");
+const searchOverlay =
+    document.getElementById("searchOverlay");
 
-const searchPanel =
-    document.getElementById("searchPanel");
-
-const searchInput =
-    document.getElementById("searchInput");
+const openSearch =
+    document.getElementById("openSearch");
 
 const closeSearch =
     document.getElementById("closeSearch");
 
-const menuButton =
-    document.getElementById("menuButton");
+const globalSearch =
+    document.getElementById("globalSearch");
 
-const mobileMenu =
-    document.getElementById("mobileMenu");
+const searchResults =
+    document.getElementById("searchResults");
 
-const closeMobile =
-    document.getElementById("closeMobile");
+const mobileNav =
+    document.getElementById("mobileNav");
 
-const profileButton =
-    document.getElementById("profileButton");
+const mobileMenuButton =
+    document.getElementById("mobileMenuButton");
 
-const ctaCreate =
-    document.getElementById("ctaCreate");
-
-const mobileCreate =
-    document.querySelector(".mobile-create");
+const mobileClose =
+    document.getElementById("mobileClose");
 
 const profileModal =
     document.getElementById("profileModal");
 
-const closeModal =
-    document.getElementById("closeModal");
+const closeProfileModal =
+    document.getElementById("closeProfileModal");
 
-const modalAccept =
-    document.getElementById("modalAccept");
+const modalCloseButton =
+    document.getElementById("modalCloseButton");
 
-const heroSearch =
-    document.getElementById("heroSearch");
+const detailModal =
+    document.getElementById("detailModal");
 
-const heroSearchButton =
-    document.getElementById("heroSearchButton");
+const closeDetailModal =
+    document.getElementById("closeDetailModal");
 
-const trendingProfiles =
-    document.getElementById("trendingProfiles");
+const trendingGrid =
+    document.getElementById("trendingGrid");
 
-const rankingList =
-    document.getElementById("rankingList");
+const categoryResults =
+    document.getElementById("categoryResults");
 
 
-/* =========================================
-   FORMATO DE VISITAS
-========================================= */
+/* ==================================================
+   UTILIDADES
+================================================== */
 
-function formatVisits(number) {
+function formatNumber(number) {
 
     if (number >= 1000000) {
 
@@ -149,7 +192,7 @@ function formatVisits(number) {
             (number / 1000000)
                 .toFixed(1)
                 .replace(".0", "")
-            + " M"
+            + "M"
         );
 
     }
@@ -160,7 +203,7 @@ function formatVisits(number) {
             (number / 1000)
                 .toFixed(1)
                 .replace(".0", "")
-            + " K"
+            + "K"
         );
 
     }
@@ -170,502 +213,763 @@ function formatVisits(number) {
 }
 
 
-/* =========================================
-   CREAR TARJETA DE PERFIL
-========================================= */
+function findProfile(id) {
 
-function createProfileCard(profile) {
-
-    return `
-
-        <article class="profile-card">
-
-            ${
-                profile.trending
-                ?
-                `<span class="trending-badge">
-                    🔥 EN TENDENCIA
-                </span>`
-                :
-                ""
-            }
-
-            <div class="profile-top">
-
-                <div class="profile-avatar">
-                    ${profile.icon}
-                </div>
-
-                <div>
-
-                    <div class="profile-name">
-                        ${profile.name}
-                    </div>
-
-                    <div class="profile-category">
-                        ${profile.category}
-                    </div>
-
-                </div>
-
-            </div>
-
-            <p class="profile-description">
-                ${profile.description}
-            </p>
-
-            <div class="profile-footer">
-
-                <span class="profile-visits">
-                    👁️ ${formatVisits(profile.visits)} visitas
-                </span>
-
-                <a href="#" class="profile-link">
-                    Ver perfil →
-                </a>
-
-            </div>
-
-        </article>
-
-    `;
+    return profiles.find(
+        profile => profile.id === id
+    );
 
 }
 
 
-/* =========================================
-   MOSTRAR TENDENCIAS
-========================================= */
+/* ==================================================
+   TRENDING
+================================================== */
 
 function renderTrending() {
 
-    if (!trendingProfiles) return;
+    if (!trendingGrid) return;
 
     const trending =
         profiles
             .filter(profile => profile.trending)
-            .slice(0, 6);
+            .slice(0, 8);
 
-    trendingProfiles.innerHTML =
-        trending
-            .map(createProfileCard)
-            .join("");
+    trendingGrid.innerHTML =
+        trending.map(
+            (profile, index) => `
+
+                <article
+                    class="trend-card"
+                    data-profile="${profile.id}"
+                >
+
+                    <div class="trend-top">
+
+                        <span class="trend-number">
+                            0${index + 1}
+                        </span>
+
+                        <span class="trend-growth">
+                            ${profile.growth}
+                        </span>
+
+                    </div>
+
+
+                    <div class="trend-icon">
+                        ${profile.icon}
+                    </div>
+
+
+                    <div class="trend-bottom">
+
+                        <span class="trend-category">
+                            ${profile.category}
+                        </span>
+
+                        <strong class="trend-name">
+                            ${profile.name}
+                        </strong>
+
+                        <div class="trend-meta">
+
+                            <span>
+                                👁 ${formatNumber(profile.visits)}
+                            </span>
+
+                            <span>
+                                ↗ CRECIENDO
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `
+        ).join("");
 
 }
 
 
-/* =========================================
-   MOSTRAR RANKING
-========================================= */
+/* ==================================================
+   CATEGORÍAS
+================================================== */
 
-function renderRanking(list = profiles) {
+function renderCategory(category = "Todos") {
 
-    if (!rankingList) return;
+    if (!categoryResults) return;
 
-    const sorted =
-        [...list]
-            .sort((a, b) => b.visits - a.visits);
+    let results;
 
-    rankingList.innerHTML =
-        sorted
-            .map((profile, index) => {
+    if (category === "Todos") {
 
-                const position =
-                    index + 1;
+        results =
+            profiles.slice(0, 6);
 
-                return `
+    } else {
 
-                    <article class="ranking-item">
+        results =
+            profiles.filter(
+                profile =>
+                    profile.category === category
+            );
 
-                        <div class="
-                            rank-number
-                            ${position <= 3 ? "top" : ""}
-                        ">
-
-                            #${position}
-
-                        </div>
-
-                        <div class="rank-info">
-
-                            <div class="rank-avatar">
-                                ${profile.icon}
-                            </div>
-
-                            <div>
-
-                                <div class="rank-name">
-                                    ${profile.name}
-                                </div>
-
-                                <div class="rank-category">
-                                    ${profile.category}
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="rank-visits">
-                            👁️ ${formatVisits(profile.visits)}
-                        </div>
-
-                        <button
-                            class="rank-button"
-                            data-profile="${profile.id}"
-                        >
-                            Ver
-                        </button>
-
-                    </article>
-
-                `;
-
-            })
-            .join("");
-
-}
+    }
 
 
-/* =========================================
-   BUSCAR
-========================================= */
+    if (!results.length) {
 
-function searchProfiles(value) {
+        categoryResults.innerHTML = `
 
-    const search =
-        value
-            .trim()
-            .toLowerCase();
+            <div class="category-result">
 
-    if (!search) {
+                <div class="category-result-icon">
+                    🔎
+                </div>
 
-        renderRanking();
+                <div class="category-result-info">
+
+                    <span>
+                        TODAVÍA NO
+                    </span>
+
+                    <strong>
+                        Estamos buscando...
+                    </strong>
+
+                    <small>
+                        Pronto habrá más perfiles aquí.
+                    </small>
+
+                </div>
+
+            </div>
+
+        `;
 
         return;
 
     }
+
+
+    categoryResults.innerHTML =
+        results.map(
+            profile => `
+
+                <article
+                    class="category-result"
+                    data-profile="${profile.id}"
+                >
+
+                    <div class="category-result-icon">
+                        ${profile.icon}
+                    </div>
+
+                    <div class="category-result-info">
+
+                        <span>
+                            ${profile.category}
+                        </span>
+
+                        <strong>
+                            ${profile.name}
+                        </strong>
+
+                        <small>
+                            ${formatNumber(profile.visits)}
+                            personas lo descubrieron
+                        </small>
+
+                    </div>
+
+                </article>
+
+            `
+        ).join("");
+
+}
+
+
+/* ==================================================
+   PROFILE DETAIL
+================================================== */
+
+function openDetail(profileId) {
+
+    const profile =
+        findProfile(profileId);
+
+    if (!profile) return;
+
+
+    document.getElementById(
+        "detailVisual"
+    ).textContent =
+        profile.icon;
+
+
+    document.getElementById(
+        "detailCategory"
+    ).textContent =
+        profile.category.toUpperCase();
+
+
+    document.getElementById(
+        "detailName"
+    ).textContent =
+        profile.name;
+
+
+    document.getElementById(
+        "detailDescription"
+    ).textContent =
+        profile.description;
+
+
+    document.getElementById(
+        "detailVisits"
+    ).textContent =
+        formatNumber(profile.visits);
+
+
+    detailModal.classList.add("active");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* ==================================================
+   SEARCH
+================================================== */
+
+function openSearchPanel() {
+
+    searchOverlay.classList.add("active");
+
+    document.body.style.overflow =
+        "hidden";
+
+    setTimeout(() => {
+
+        globalSearch.focus();
+
+    }, 150);
+
+}
+
+
+function closeSearchPanel() {
+
+    searchOverlay.classList.remove("active");
+
+    document.body.style.overflow =
+        "";
+
+    globalSearch.value = "";
+
+    searchResults.innerHTML =
+        "";
+
+}
+
+
+function searchProfiles(value) {
+
+    const query =
+        value
+            .trim()
+            .toLowerCase();
+
+
+    if (!query) {
+
+        searchResults.innerHTML =
+            "";
+
+        return;
+
+    }
+
 
     const results =
         profiles.filter(profile =>
 
             profile.name
                 .toLowerCase()
-                .includes(search)
+                .includes(query)
 
             ||
 
             profile.category
                 .toLowerCase()
-                .includes(search)
+                .includes(query)
 
             ||
 
             profile.description
                 .toLowerCase()
-                .includes(search)
+                .includes(query)
 
         );
 
-    renderRanking(results);
 
-    document
-        .getElementById("ranking")
-        ?.scrollIntoView({
-            behavior: "smooth"
-        });
+    if (!results.length) {
+
+        searchResults.innerHTML = `
+
+            <div class="category-result">
+
+                <div class="category-result-icon">
+                    🔎
+                </div>
+
+                <div class="category-result-info">
+
+                    <span>
+                        SIN RESULTADOS
+                    </span>
+
+                    <strong>
+                        No encontramos eso todavía.
+                    </strong>
+
+                    <small>
+                        Intenta con otro término.
+                    </small>
+
+                </div>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    searchResults.innerHTML =
+        results.map(
+            profile => `
+
+                <article
+                    class="category-result search-result-item"
+                    data-profile="${profile.id}"
+                >
+
+                    <div class="category-result-icon">
+                        ${profile.icon}
+                    </div>
+
+                    <div class="category-result-info">
+
+                        <span>
+                            ${profile.category}
+                        </span>
+
+                        <strong>
+                            ${profile.name}
+                        </strong>
+
+                        <small>
+                            ${profile.description}
+                        </small>
+
+                    </div>
+
+                </article>
+
+            `
+        ).join("");
 
 }
 
 
-/* =========================================
-   CATEGORÍAS
-========================================= */
+/* ==================================================
+   MODAL CRECER
+================================================== */
 
-document
-    .querySelectorAll(".category-card")
-    .forEach(button => {
+function openGrowModal() {
 
-        button.addEventListener("click", () => {
+    profileModal.classList.add("active");
 
-            const category =
-                button.dataset.category;
+    document.body.style.overflow =
+        "hidden";
 
-            const results =
-                profiles.filter(
-                    profile =>
-                        profile.category === category
-                );
-
-            renderRanking(results);
-
-            document
-                .getElementById("ranking")
-                ?.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-        });
-
-    });
+}
 
 
-/* =========================================
-   FILTROS DEL RANKING
-========================================= */
+function closeGrowModal() {
 
-document
-    .querySelectorAll(".filter-button")
-    .forEach(button => {
+    profileModal.classList.remove("active");
 
-        button.addEventListener("click", () => {
+    document.body.style.overflow =
+        "";
 
-            document
-                .querySelectorAll(".filter-button")
-                .forEach(btn =>
-                    btn.classList.remove("active")
-                );
-
-            button.classList.add("active");
-
-            const category =
-                button.textContent.trim();
-
-            if (category === "Todos") {
-
-                renderRanking();
-
-                return;
-
-            }
-
-            const results =
-                profiles.filter(
-                    profile =>
-                        profile.category === category
-                );
-
-            renderRanking(results);
-
-        });
-
-    });
+}
 
 
-/* =========================================
-   BUSCADOR HEADER
-========================================= */
+/* ==================================================
+   EVENTOS
+================================================== */
 
-if (searchButton) {
+openSearch?.addEventListener(
+    "click",
+    openSearchPanel
+);
 
-    searchButton.addEventListener("click", () => {
 
-        searchPanel.classList.toggle("active");
+closeSearch?.addEventListener(
+    "click",
+    closeSearchPanel
+);
 
-        if (searchPanel.classList.contains("active")) {
 
-            searchInput.focus();
+globalSearch?.addEventListener(
+    "input",
+    event => {
+
+        searchProfiles(
+            event.target.value
+        );
+
+    }
+);
+
+
+globalSearch?.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Escape") {
+
+            closeSearchPanel();
 
         }
 
-    });
-
-}
-
-
-if (closeSearch) {
-
-    closeSearch.addEventListener("click", () => {
-
-        searchPanel.classList.remove("active");
-
-        searchInput.value = "";
-
-        renderRanking();
-
-    });
-
-}
+    }
+);
 
 
-if (searchInput) {
+/* ==================================================
+   MOBILE
+================================================== */
 
-    searchInput.addEventListener("input", () => {
+mobileMenuButton?.addEventListener(
+    "click",
+    () => {
 
-        searchProfiles(searchInput.value);
+        mobileNav.classList.add("active");
 
-    });
+        document.body.style.overflow =
+            "hidden";
 
-}
-
-
-/* =========================================
-   BUSCADOR HERO
-========================================= */
-
-if (heroSearchButton) {
-
-    heroSearchButton.addEventListener("click", () => {
-
-        searchProfiles(heroSearch.value);
-
-    });
-
-}
+    }
+);
 
 
-if (heroSearch) {
+mobileClose?.addEventListener(
+    "click",
+    () => {
 
-    heroSearch.addEventListener("keydown", event => {
+        mobileNav.classList.remove("active");
 
-        if (event.key === "Enter") {
+        document.body.style.overflow =
+            "";
 
-            searchProfiles(heroSearch.value);
-
-        }
-
-    });
-
-}
-
-
-/* =========================================
-   MENÚ MOBILE
-========================================= */
-
-if (menuButton) {
-
-    menuButton.addEventListener("click", () => {
-
-        mobileMenu.classList.add("active");
-
-        document.body.style.overflow = "hidden";
-
-    });
-
-}
-
-
-function closeMobileMenu() {
-
-    mobileMenu.classList.remove("active");
-
-    document.body.style.overflow = "";
-
-}
-
-
-if (closeMobile) {
-
-    closeMobile.addEventListener(
-        "click",
-        closeMobileMenu
-    );
-
-}
+    }
+);
 
 
 document
-    .querySelectorAll(".mobile-menu a")
+    .querySelectorAll(".mobile-nav a")
     .forEach(link => {
 
         link.addEventListener(
             "click",
-            closeMobileMenu
+            () => {
+
+                mobileNav.classList.remove(
+                    "active"
+                );
+
+                document.body.style.overflow =
+                    "";
+
+            }
         );
 
     });
 
 
-/* =========================================
-   MODAL
-========================================= */
+/* ==================================================
+   CRECER
+================================================== */
 
-function openProfileModal() {
+document
+    .querySelectorAll(
+        "#headerGrow, #heroGrow, #mainGrowButton"
+    )
+    .forEach(button => {
 
-    profileModal.classList.add("active");
+        button.addEventListener(
+            "click",
+            openGrowModal
+        );
 
-    document.body.style.overflow = "hidden";
-
-}
-
-
-function closeProfileModal() {
-
-    profileModal.classList.remove("active");
-
-    document.body.style.overflow = "";
-
-}
+    });
 
 
-if (profileButton) {
-
-    profileButton.addEventListener(
-        "click",
-        openProfileModal
-    );
-
-}
+closeProfileModal?.addEventListener(
+    "click",
+    closeGrowModal
+);
 
 
-if (ctaCreate) {
-
-    ctaCreate.addEventListener(
-        "click",
-        openProfileModal
-    );
-
-}
+modalCloseButton?.addEventListener(
+    "click",
+    closeGrowModal
+);
 
 
-if (mobileCreate) {
+/* ==================================================
+   DETAIL MODAL
+================================================== */
 
-    mobileCreate.addEventListener(
+closeDetailModal?.addEventListener(
+    "click",
+    () => {
+
+        detailModal.classList.remove(
+            "active"
+        );
+
+        document.body.style.overflow =
+            "";
+
+    }
+);
+
+
+/* ==================================================
+   DELEGACIÓN DE CLICS
+================================================== */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const element =
+            event.target.closest(
+                "[data-profile]"
+            );
+
+
+        if (!element) return;
+
+
+        const profileId =
+            element.dataset.profile;
+
+
+        if (!profileId) return;
+
+
+        closeSearchPanel();
+
+        openDetail(profileId);
+
+    }
+);
+
+
+/* ==================================================
+   CATEGORÍAS
+================================================== */
+
+document
+    .querySelectorAll(".category-pill")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .querySelectorAll(
+                        ".category-pill"
+                    )
+                    .forEach(
+                        item =>
+                            item.classList.remove(
+                                "active"
+                            )
+                    );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                renderCategory(
+                    button.dataset.category
+                );
+
+            }
+        );
+
+    });
+
+
+/* ==================================================
+   DESCUBRIR MÁS
+================================================== */
+
+document
+    .getElementById("discoverMore")
+    ?.addEventListener(
         "click",
         () => {
 
-            closeMobileMenu();
-
-            openProfileModal();
+            document
+                .getElementById("categorias")
+                ?.scrollIntoView({
+                    behavior: "smooth"
+                });
 
         }
     );
 
-}
 
+/* ==================================================
+   VER TENDENCIAS
+================================================== */
 
-if (closeModal) {
-
-    closeModal.addEventListener(
+document
+    .getElementById("viewTrending")
+    ?.addEventListener(
         "click",
-        closeProfileModal
+        () => {
+
+            document
+                .getElementById("tendencias")
+                ?.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
     );
 
-}
+
+/* ==================================================
+   ESCAPE
+================================================== */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key !== "Escape")
+            return;
 
 
-if (modalAccept) {
+        closeSearchPanel();
 
-    modalAccept.addEventListener(
-        "click",
-        closeProfileModal
+        closeGrowModal();
+
+
+        detailModal.classList.remove(
+            "active"
+        );
+
+
+        mobileNav.classList.remove(
+            "active"
+        );
+
+
+        document.body.style.overflow =
+            "";
+
+    }
+);
+
+
+/* ==================================================
+   CLICK FUERA DE MODALES
+================================================== */
+
+profileModal?.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            profileModal
+        ) {
+
+            closeGrowModal();
+
+        }
+
+    }
+);
+
+
+detailModal?.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target ===
+            detailModal
+        ) {
+
+            detailModal.classList.remove(
+                "active"
+            );
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+    }
+);
+
+
+/* ==================================================
+   CURSOR GLOW
+================================================== */
+
+const cursorGlow =
+    document.querySelector(
+        ".cursor-glow"
     );
 
-}
 
+if (
+    cursorGlow &&
+    window.matchMedia(
+        "(pointer:fine)"
+    ).matches
+) {
 
-if (profileModal) {
-
-    profileModal.addEventListener(
-        "click",
+    document.addEventListener(
+        "mousemove",
         event => {
 
-            if (event.target === profileModal) {
+            cursorGlow.style.left =
+                event.clientX + "px";
 
-                closeProfileModal();
-
-            }
+            cursorGlow.style.top =
+                event.clientY + "px";
 
         }
     );
@@ -673,13 +977,20 @@ if (profileModal) {
 }
 
 
-/* =========================================
+/* ==================================================
    INICIALIZAR
-========================================= */
+================================================== */
 
 renderTrending();
 
-renderRanking();
+renderCategory("Todos");
 
-console.log("TOPSPOT iniciado correctamente.");
-console.log("Perfiles cargados:", profiles.length);
+
+console.log(
+    "PULSO V1 iniciado correctamente."
+);
+
+console.log(
+    "Perfiles demo:",
+    profiles.length
+);
