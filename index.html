@@ -2,78 +2,103 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TOPSPOT | Descubre quién está destacando</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Descubre negocios, creadores, streamers, artistas y proyectos destacados en TOPSPOT."
+        content="PULSO — descubre personas, marcas, negocios y proyectos que están creciendo."
     >
+
+    <title>PULSO — Hazte visible</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
+    <!-- ==================================================
+         CURSOR / EFECTOS
+    ================================================== -->
+
+    <div class="cursor-glow"></div>
+
+
+    <!-- ==================================================
          HEADER
-    ========================== -->
+    ================================================== -->
 
-    <header class="header">
+    <header class="site-header">
 
-        <div class="container header-content">
+        <div class="header-inner">
 
-            <a href="#" class="logo">
-                <span class="logo-icon">
-                    <i></i>
-                    <i></i>
-                    <i></i>
+            <a href="#inicio" class="brand">
+
+                <span class="brand-mark">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
                 </span>
 
-                <span>TOP<span>SPOT</span></span>
+                <span class="brand-name">
+                    PULSO
+                </span>
+
             </a>
 
-            <nav class="desktop-nav">
-                <a href="#inicio">Inicio</a>
-                <a href="#categorias">Categorías</a>
-                <a href="#ranking">Ranking</a>
-                <a href="#tendencias">En tendencia</a>
+
+            <nav class="main-nav">
+
+                <a href="#descubrir">
+                    Descubrir
+                </a>
+
+                <a href="#tendencias">
+                    Tendencias
+                </a>
+
+                <a href="#categorias">
+                    Explorar
+                </a>
+
+                <a href="#crecer">
+                    Crecer
+                </a>
+
             </nav>
+
 
             <div class="header-actions">
 
-                <button class="icon-button" id="searchButton" aria-label="Buscar">
-                    🔍
-                </button>
-
-                <button class="profile-button" id="profileButton">
-                    <span>+</span>
-                    Crear perfil
-                </button>
-
-                <button class="menu-button" id="menuButton" aria-label="Menú">
-                    ☰
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- Buscador -->
-
-        <div class="search-panel" id="searchPanel">
-
-            <div class="container search-inner">
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Busca un negocio, creador, streamer..."
-                    autocomplete="off"
+                <button
+                    class="header-search"
+                    id="openSearch"
+                    aria-label="Buscar"
                 >
+                    <span>⌕</span>
+                </button>
 
-                <button id="closeSearch">✕</button>
+                <button
+                    class="grow-button"
+                    id="headerGrow"
+                >
+                    Quiero crecer
+                    <span>↗</span>
+                </button>
+
+                <button
+                    class="mobile-menu-button"
+                    id="mobileMenuButton"
+                    aria-label="Abrir menú"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
 
             </div>
 
@@ -82,276 +107,805 @@
     </header>
 
 
-    <!-- =========================
-         MOBILE MENU
-    ========================== -->
+    <!-- ==================================================
+         SEARCH OVERLAY
+    ================================================== -->
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div
+        class="search-overlay"
+        id="searchOverlay"
+    >
 
-        <button class="close-mobile" id="closeMobile">
-            ✕
-        </button>
+        <div class="search-container">
 
-        <a href="#inicio">Inicio</a>
-        <a href="#categorias">Categorías</a>
-        <a href="#ranking">Ranking</a>
-        <a href="#tendencias">En tendencia</a>
+            <button
+                class="close-search"
+                id="closeSearch"
+            >
+                ×
+            </button>
 
-        <button class="mobile-create">
-            + Crear perfil
-        </button>
+            <span class="search-label">
+                BUSCAR EN PULSO
+            </span>
+
+            <h2>
+                ¿Qué quieres descubrir?
+            </h2>
+
+            <div class="big-search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Busca un creador, negocio, marca..."
+                    autocomplete="off"
+                >
+
+                <kbd>
+                    ENTER
+                </kbd>
+
+            </div>
+
+            <div
+                class="search-results"
+                id="searchResults"
+            ></div>
+
+        </div>
 
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
+         MOBILE NAV
+    ================================================== -->
+
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <button
+            class="mobile-close"
+            id="mobileClose"
+        >
+            ×
+        </button>
+
+        <span class="mobile-nav-label">
+            PULSO
+        </span>
+
+        <a href="#descubrir">
+            Descubrir
+        </a>
+
+        <a href="#tendencias">
+            Tendencias
+        </a>
+
+        <a href="#categorias">
+            Explorar
+        </a>
+
+        <a href="#crecer">
+            Quiero crecer
+        </a>
+
+    </div>
+
+
+    <!-- ==================================================
          HERO
-    ========================== -->
+    ================================================== -->
 
     <main id="inicio">
 
         <section class="hero">
 
-            <div class="hero-background"></div>
+            <div class="hero-grid"></div>
 
-            <div class="container hero-content">
+            <div class="hero-orb orb-one"></div>
+            <div class="hero-orb orb-two"></div>
 
-                <div class="hero-badge">
-                    🔥 La nueva forma de descubrir
+            <div class="hero-content">
+
+                <div class="hero-kicker">
+
+                    <span class="pulse-dot"></span>
+
+                    EL LUGAR DONDE LAS COSAS EMPIEZAN
+
                 </div>
+
 
                 <h1>
-                    Encuentra quién está
-                    <span>destacando.</span>
+
+                    Todos tienen algo
+                    <br>
+
+                    que mostrar.
+
+                    <em>
+                        No todos logran
+                        <span>ser descubiertos.</span>
+                    </em>
+
                 </h1>
 
-                <p>
-                    Descubre negocios, creadores, streamers,
-                    artistas y proyectos que están llamando la atención.
+
+                <p class="hero-description">
+
+                    PULSO conecta a las personas que están buscando
+                    con las personas, marcas, negocios y proyectos
+                    que están construyendo algo increíble.
+
                 </p>
 
-                <div class="hero-search">
 
-                    <span>🔍</span>
+                <div class="hero-actions">
 
-                    <input
-                        type="text"
-                        id="heroSearch"
-                        placeholder="¿Qué estás buscando?"
+                    <a
+                        href="#descubrir"
+                        class="primary-action"
                     >
-
-                    <button id="heroSearchButton">
-                        Buscar
-                    </button>
-
-                </div>
-
-                <div class="hero-tags">
-
-                    <span>🔥 Tendencias</span>
-                    <span>🏆 Top destacados</span>
-                    <span>🆕 Nuevos</span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CATEGORÍAS
-        ========================== -->
-
-        <section class="section" id="categorias">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <div>
-                        <span class="eyebrow">EXPLORA</span>
-
-                        <h2>
-                            Encuentra tu categoría
-                        </h2>
-                    </div>
-
-                    <p>
-                        Explora personas, negocios y proyectos.
-                    </p>
-
-                </div>
-
-
-                <div class="categories-grid">
-
-                    <button class="category-card" data-category="Negocios">
-                        <span class="category-icon">🏪</span>
-                        <strong>Negocios</strong>
-                        <small>Tiendas y servicios</small>
-                    </button>
-
-                    <button class="category-card" data-category="Creadores">
-                        <span class="category-icon">🎥</span>
-                        <strong>Creadores</strong>
-                        <small>YouTubers e influencers</small>
-                    </button>
-
-                    <button class="category-card" data-category="Gaming">
-                        <span class="category-icon">🎮</span>
-                        <strong>Gaming</strong>
-                        <small>Gamers y streamers</small>
-                    </button>
-
-                    <button class="category-card" data-category="Música">
-                        <span class="category-icon">🎵</span>
-                        <strong>Música</strong>
-                        <small>Artistas y músicos</small>
-                    </button>
-
-                    <button class="category-card" data-category="Arte">
-                        <span class="category-icon">🎨</span>
-                        <strong>Arte</strong>
-                        <small>Artistas y diseñadores</small>
-                    </button>
-
-                    <button class="category-card" data-category="TikTok">
-                        <span class="category-icon">📱</span>
-                        <strong>TikTok</strong>
-                        <small>TikTokers destacados</small>
-                    </button>
-
-                    <button class="category-card" data-category="Cine">
-                        <span class="category-icon">🎬</span>
-                        <strong>Cine</strong>
-                        <small>Películas y proyectos</small>
-                    </button>
-
-                    <button class="category-card" data-category="Proyectos">
-                        <span class="category-icon">🚀</span>
-                        <strong>Proyectos</strong>
-                        <small>Nuevas ideas</small>
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             TENDENCIAS
-        ========================== -->
-
-        <section class="section section-dark" id="tendencias">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <div>
-                        <span class="eyebrow">🔥 AHORA MISMO</span>
-
-                        <h2>
-                            En tendencia
-                        </h2>
-                    </div>
-
-                    <button class="text-button" id="viewAllTrending">
-                        Ver todos →
-                    </button>
-
-                </div>
-
-                <div class="profiles-grid" id="trendingProfiles"></div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             RANKING
-        ========================== -->
-
-        <section class="section" id="ranking">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <div>
-                        <span class="eyebrow">🏆 TOPSPOT</span>
-
-                        <h2>
-                            Ranking destacado
-                        </h2>
-                    </div>
-
-                    <div class="ranking-filter">
-
-                        <button class="filter-button active">
-                            Todos
-                        </button>
-
-                        <button class="filter-button">
-                            Negocios
-                        </button>
-
-                        <button class="filter-button">
-                            Creadores
-                        </button>
-
-                        <button class="filter-button">
-                            Gaming
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <div class="ranking-list" id="rankingList"></div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CTA
-        ========================== -->
-
-        <section class="cta-section">
-
-            <div class="container">
-
-                <div class="cta-box">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            ¿QUIERES SER VISTO?
+                        <span>
+                            Descubrir
                         </span>
 
-                        <h2>
-                            Pon tu proyecto en el mapa.
-                        </h2>
+                        <b>
+                            →
+                        </b>
+                    </a>
+
+
+                    <button
+                        class="secondary-action"
+                        id="heroGrow"
+                    >
+                        Quiero crecer
+                        <span>
+                            ↗
+                        </span>
+                    </button>
+
+                </div>
+
+
+                <div class="hero-proof">
+
+                    <div class="proof-item">
+
+                        <strong>
+                            01
+                        </strong>
+
+                        <span>
+                            Descubre
+                        </span>
+
+                    </div>
+
+
+                    <div class="proof-line"></div>
+
+
+                    <div class="proof-item">
+
+                        <strong>
+                            02
+                        </strong>
+
+                        <span>
+                            Conecta
+                        </span>
+
+                    </div>
+
+
+                    <div class="proof-line"></div>
+
+
+                    <div class="proof-item">
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <span>
+                            Crece
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-bottom">
+
+                <span>
+                    DESLIZA PARA DESCUBRIR
+                </span>
+
+                <span class="scroll-line"></span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             LIVE BAR
+        ================================================== -->
+
+        <section class="live-bar">
+
+            <div class="live-inner">
+
+                <span class="live-label">
+
+                    <span></span>
+
+                    PULSO AHORA
+
+                </span>
+
+                <div class="live-track">
+
+                    <div>
+                        🎮 Nova Gaming está creciendo
+                    </div>
+
+                    <div>
+                        🎵 Zero Beat acaba de aparecer
+                    </div>
+
+                    <div>
+                        🍔 Café Central fue descubierto
+                    </div>
+
+                    <div>
+                        🚀 Pixel Studio está en tendencia
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             DISCOVER
+        ================================================== -->
+
+        <section
+            class="discover-section section"
+            id="descubrir"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-number">
+                        01 / DESCUBRIR
+                    </span>
+
+                    <h2>
+                        Hay algo
+                        <span>
+                            esperándote.
+                        </span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    Explora personas, negocios y proyectos
+                    que podrían convertirse en tu próximo
+                    descubrimiento.
+                </p>
+
+            </div>
+
+
+            <div class="discover-layout">
+
+                <div class="featured-discovery">
+
+                    <div class="feature-image">
+
+                        <div class="feature-gradient"></div>
+
+                        <span class="feature-tag">
+                            🔥 EN TENDENCIA
+                        </span>
+
+                        <div class="feature-symbol">
+                            🎮
+                        </div>
+
+                        <div class="feature-info">
+
+                            <span>
+                                GAMING · STREAMER
+                            </span>
+
+                            <h3>
+                                Nova Gaming
+                            </h3>
+
+                            <p>
+                                Construyendo una comunidad
+                                un stream a la vez.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-footer">
+
+                        <div>
+
+                            <span>
+                                +28% ESTA SEMANA
+                            </span>
+
+                            <strong>
+                                12.4K personas lo descubrieron
+                            </strong>
+
+                        </div>
+
+                        <button
+                            class="arrow-button"
+                            data-profile="nova"
+                        >
+                            →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="side-discoveries">
+
+                    <article
+                        class="mini-discovery"
+                        data-profile="luna"
+                    >
+
+                        <div class="mini-icon">
+                            🎥
+                        </div>
+
+                        <div class="mini-content">
+
+                            <span>
+                                CREADORA
+                            </span>
+
+                            <h3>
+                                Luna Creator
+                            </h3>
+
+                            <p>
+                                Lifestyle · Entretenimiento
+                            </p>
+
+                        </div>
+
+                        <span class="mini-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article
+                        class="mini-discovery"
+                        data-profile="central"
+                    >
+
+                        <div class="mini-icon">
+                            ☕
+                        </div>
+
+                        <div class="mini-content">
+
+                            <span>
+                                NEGOCIO
+                            </span>
+
+                            <h3>
+                                Café Central
+                            </h3>
+
+                            <p>
+                                Café · Postres · Cadereyta
+                            </p>
+
+                        </div>
+
+                        <span class="mini-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article
+                        class="mini-discovery"
+                        data-profile="zero"
+                    >
+
+                        <div class="mini-icon">
+                            🎵
+                        </div>
+
+                        <div class="mini-content">
+
+                            <span>
+                                MÚSICA
+                            </span>
+
+                            <h3>
+                                Zero Beat
+                            </h3>
+
+                            <p>
+                                Artista independiente
+                            </p>
+
+                        </div>
+
+                        <span class="mini-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <button
+                        class="discover-more"
+                        id="discoverMore"
+                    >
+                        Explorar todo PULSO
+                        <span>
+                            →
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             TRENDING
+        ================================================== -->
+
+        <section
+            class="trending-section section"
+            id="tendencias"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-number">
+                        02 / AHORA
+                    </span>
+
+                    <h2>
+                        Lo que está
+                        <span>
+                            haciendo ruido.
+                        </span>
+                    </h2>
+
+                </div>
+
+                <button
+                    class="outline-button"
+                    id="viewTrending"
+                >
+                    Ver todo →
+                </button>
+
+            </div>
+
+
+            <div
+                class="trending-grid"
+                id="trendingGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- ==================================================
+             CATEGORIES
+        ================================================== -->
+
+        <section
+            class="categories-section section"
+            id="categorias"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-number">
+                        03 / EXPLORAR
+                    </span>
+
+                    <h2>
+                        Encuentra
+                        <span>
+                            tu mundo.
+                        </span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    No importa lo que busques.
+                    Probablemente esté aquí.
+                </p>
+
+            </div>
+
+
+            <div class="category-marquee">
+
+                <button
+                    class="category-pill active"
+                    data-category="Todos"
+                >
+                    Todo
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Creadores"
+                >
+                    Creadores
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Negocios"
+                >
+                    Negocios
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Gaming"
+                >
+                    Gaming
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Música"
+                >
+                    Música
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Arte"
+                >
+                    Arte
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Tecnología"
+                >
+                    Tecnología
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Cine"
+                >
+                    Cine
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Servicios"
+                >
+                    Servicios
+                </button>
+
+                <button
+                    class="category-pill"
+                    data-category="Proyectos"
+                >
+                    Proyectos
+                </button>
+
+            </div>
+
+
+            <div
+                class="category-results"
+                id="categoryResults"
+            ></div>
+
+        </section>
+
+
+        <!-- ==================================================
+             GROW
+        ================================================== -->
+
+        <section
+            class="grow-section"
+            id="crecer"
+        >
+
+            <div class="grow-background"></div>
+
+            <div class="grow-content">
+
+                <span class="section-number">
+                    04 / CRECER
+                </span>
+
+                <h2>
+
+                    Lo que haces
+                    <br>
+
+                    <span>
+                        merece ser visto.
+                    </span>
+
+                </h2>
+
+                <p>
+
+                    Ya sea que tengas un negocio, seas creador,
+                    artista, streamer o estés construyendo algo
+                    completamente nuevo, PULSO te ayuda a ponerte
+                    frente a las personas correctas.
+
+                </p>
+
+
+                <div class="grow-features">
+
+                    <div>
+
+                        <span>
+                            01
+                        </span>
+
+                        <strong>
+                            Hazte visible
+                        </strong>
 
                         <p>
-                            Crea tu perfil en TOPSPOT y permite que
-                            más personas descubran lo que haces.
+                            Presenta lo que haces
+                            de una manera que destaque.
                         </p>
 
                     </div>
 
-                    <button class="primary-button" id="ctaCreate">
-                        Crear mi perfil
-                    </button>
+
+                    <div>
+
+                        <span>
+                            02
+                        </span>
+
+                        <strong>
+                            Llega más lejos
+                        </strong>
+
+                        <p>
+                            Aparece frente a personas
+                            interesadas en lo que haces.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            03
+                        </span>
+
+                        <strong>
+                            Mide tu crecimiento
+                        </strong>
+
+                        <p>
+                            Descubre cuántas personas
+                            están llegando a ti.
+                        </p>
+
+                    </div>
 
                 </div>
+
+
+                <button
+                    class="grow-main-button"
+                    id="mainGrowButton"
+                >
+                    <span>
+                        Quiero crecer en PULSO
+                    </span>
+
+                    <b>
+                        ↗
+                    </b>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="final-section">
+
+            <div class="final-content">
+
+                <span class="final-small">
+                    PULSO
+                </span>
+
+                <h2>
+
+                    Descubrir.
+                    <br>
+
+                    Conectar.
+                    <br>
+
+                    <span>
+                        Crecer.
+                    </span>
+
+                </h2>
+
+                <p>
+                    El siguiente gran descubrimiento
+                    podría ser tuyo.
+                </p>
+
+                <a
+                    href="#descubrir"
+                    class="final-button"
+                >
+                    Explorar PULSO →
+                </a>
 
             </div>
 
@@ -360,83 +914,246 @@
     </main>
 
 
-    <!-- =========================
+    <!-- ==================================================
          FOOTER
-    ========================== -->
+    ================================================== -->
 
-    <footer class="footer">
+    <footer class="site-footer">
 
-        <div class="container footer-content">
+        <div class="footer-top">
 
-            <div>
+            <div class="footer-brand">
 
-                <a href="#" class="logo">
-                    <span class="logo-icon">
-                        <i></i>
-                        <i></i>
-                        <i></i>
+                <a href="#inicio" class="brand">
+
+                    <span class="brand-mark">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
                     </span>
 
-                    <span>TOP<span>SPOT</span></span>
+                    <span class="brand-name">
+                        PULSO
+                    </span>
+
                 </a>
 
                 <p>
-                    Descubre quién está destacando.
+                    Donde la gente que está creciendo
+                    se hace visible.
                 </p>
 
             </div>
 
-            <div class="footer-links">
 
-                <a href="#inicio">Inicio</a>
-                <a href="#categorias">Categorías</a>
-                <a href="#ranking">Ranking</a>
-                <a href="#">Privacidad</a>
+            <div class="footer-column">
+
+                <span>
+                    EXPLORA
+                </span>
+
+                <a href="#descubrir">
+                    Descubrir
+                </a>
+
+                <a href="#tendencias">
+                    Tendencias
+                </a>
+
+                <a href="#categorias">
+                    Categorías
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <span>
+                    CRECE
+                </span>
+
+                <a href="#crecer">
+                    Quiero crecer
+                </a>
+
+                <a href="#">
+                    Cómo funciona
+                </a>
+
+                <a href="#">
+                    Precios
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <span>
+                    PULSO
+                </span>
+
+                <a href="#">
+                    Sobre nosotros
+                </a>
+
+                <a href="#">
+                    Contacto
+                </a>
+
+                <a href="#">
+                    Privacidad
+                </a>
 
             </div>
 
         </div>
 
-        <div class="container copyright">
 
-            © 2026 TOPSPOT. Todos los derechos reservados.
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 PULSO
+            </span>
+
+            <span>
+                Hecho para quienes están construyendo algo.
+            </span>
 
         </div>
 
     </footer>
 
 
-    <!-- =========================
-         MODAL CREAR PERFIL
-    ========================== -->
+    <!-- ==================================================
+         PROFILE MODAL
+    ================================================== -->
 
-    <div class="modal-overlay" id="profileModal">
+    <div
+        class="modal-overlay"
+        id="profileModal"
+    >
 
-        <div class="modal">
+        <div class="profile-modal">
 
-            <button class="modal-close" id="closeModal">
-                ✕
+            <button
+                class="modal-close"
+                id="closeProfileModal"
+            >
+                ×
             </button>
 
-            <div class="modal-icon">
-                🚀
-            </div>
-
-            <span class="eyebrow">
-                PRÓXIMAMENTE
+            <span class="modal-number">
+                PULSO / CRECER
             </span>
 
+            <div class="modal-icon">
+                ↗
+            </div>
+
             <h2>
-                Crea tu perfil TOPSPOT
+                Tu proyecto
+                <span>
+                    merece crecer.
+                </span>
             </h2>
 
             <p>
-                Estamos preparando el sistema para que puedas
-                registrar tu negocio, canal, proyecto o perfil.
+
+                Estamos preparando el sistema de perfiles
+                para que puedas presentar tu negocio, canal,
+                marca o proyecto y empezar a recibir visitas.
+
             </p>
 
-            <button class="primary-button" id="modalAccept">
-                Entendido
+            <div class="modal-coming">
+                PRÓXIMAMENTE
+            </div>
+
+            <button
+                class="modal-button"
+                id="modalCloseButton"
+            >
+                Seguir explorando
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         PROFILE DETAIL MODAL
+    ================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="detailModal"
+    >
+
+        <div class="detail-modal">
+
+            <button
+                class="modal-close"
+                id="closeDetailModal"
+            >
+                ×
+            </button>
+
+            <div
+                class="detail-visual"
+                id="detailVisual"
+            >
+                🎮
+            </div>
+
+            <span
+                class="detail-category"
+                id="detailCategory"
+            >
+                GAMING
+            </span>
+
+            <h2 id="detailName">
+                Nova Gaming
+            </h2>
+
+            <p id="detailDescription">
+                Construyendo una comunidad un stream a la vez.
+            </p>
+
+            <div class="detail-stats">
+
+                <div>
+                    <strong id="detailVisits">
+                        12.4K
+                    </strong>
+
+                    <span>
+                        descubiertos
+                    </span>
+                </div>
+
+                <div>
+                    <strong>
+                        +28%
+                    </strong>
+
+                    <span>
+                        crecimiento
+                    </span>
+                </div>
+
+            </div>
+
+            <button
+                class="modal-button"
+                id="detailAction"
+            >
+                Próximamente →
             </button>
 
         </div>
