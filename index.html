@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TOPSPOT | Descubre quién está destacando</title>
+
+    <meta
+        name="description"
+        content="Descubre negocios, creadores, streamers, artistas y proyectos destacados en TOPSPOT."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+
+                <span>TOP<span>SPOT</span></span>
+            </a>
+
+            <nav class="desktop-nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#ranking">Ranking</a>
+                <a href="#tendencias">En tendencia</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button class="icon-button" id="searchButton" aria-label="Buscar">
+                    🔍
+                </button>
+
+                <button class="profile-button" id="profileButton">
+                    <span>+</span>
+                    Crear perfil
+                </button>
+
+                <button class="menu-button" id="menuButton" aria-label="Menú">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Buscador -->
+
+        <div class="search-panel" id="searchPanel">
+
+            <div class="container search-inner">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Busca un negocio, creador, streamer..."
+                    autocomplete="off"
+                >
+
+                <button id="closeSearch">✕</button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MOBILE MENU
+    ========================== -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <button class="close-mobile" id="closeMobile">
+            ✕
+        </button>
+
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#ranking">Ranking</a>
+        <a href="#tendencias">En tendencia</a>
+
+        <button class="mobile-create">
+            + Crear perfil
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main id="inicio">
+
+        <section class="hero">
+
+            <div class="hero-background"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-badge">
+                    🔥 La nueva forma de descubrir
+                </div>
+
+                <h1>
+                    Encuentra quién está
+                    <span>destacando.</span>
+                </h1>
+
+                <p>
+                    Descubre negocios, creadores, streamers,
+                    artistas y proyectos que están llamando la atención.
+                </p>
+
+                <div class="hero-search">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        id="heroSearch"
+                        placeholder="¿Qué estás buscando?"
+                    >
+
+                    <button id="heroSearchButton">
+                        Buscar
+                    </button>
+
+                </div>
+
+                <div class="hero-tags">
+
+                    <span>🔥 Tendencias</span>
+                    <span>🏆 Top destacados</span>
+                    <span>🆕 Nuevos</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CATEGORÍAS
+        ========================== -->
+
+        <section class="section" id="categorias">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">EXPLORA</span>
+
+                        <h2>
+                            Encuentra tu categoría
+                        </h2>
+                    </div>
+
+                    <p>
+                        Explora personas, negocios y proyectos.
+                    </p>
+
+                </div>
+
+
+                <div class="categories-grid">
+
+                    <button class="category-card" data-category="Negocios">
+                        <span class="category-icon">🏪</span>
+                        <strong>Negocios</strong>
+                        <small>Tiendas y servicios</small>
+                    </button>
+
+                    <button class="category-card" data-category="Creadores">
+                        <span class="category-icon">🎥</span>
+                        <strong>Creadores</strong>
+                        <small>YouTubers e influencers</small>
+                    </button>
+
+                    <button class="category-card" data-category="Gaming">
+                        <span class="category-icon">🎮</span>
+                        <strong>Gaming</strong>
+                        <small>Gamers y streamers</small>
+                    </button>
+
+                    <button class="category-card" data-category="Música">
+                        <span class="category-icon">🎵</span>
+                        <strong>Música</strong>
+                        <small>Artistas y músicos</small>
+                    </button>
+
+                    <button class="category-card" data-category="Arte">
+                        <span class="category-icon">🎨</span>
+                        <strong>Arte</strong>
+                        <small>Artistas y diseñadores</small>
+                    </button>
+
+                    <button class="category-card" data-category="TikTok">
+                        <span class="category-icon">📱</span>
+                        <strong>TikTok</strong>
+                        <small>TikTokers destacados</small>
+                    </button>
+
+                    <button class="category-card" data-category="Cine">
+                        <span class="category-icon">🎬</span>
+                        <strong>Cine</strong>
+                        <small>Películas y proyectos</small>
+                    </button>
+
+                    <button class="category-card" data-category="Proyectos">
+                        <span class="category-icon">🚀</span>
+                        <strong>Proyectos</strong>
+                        <small>Nuevas ideas</small>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TENDENCIAS
+        ========================== -->
+
+        <section class="section section-dark" id="tendencias">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">🔥 AHORA MISMO</span>
+
+                        <h2>
+                            En tendencia
+                        </h2>
+                    </div>
+
+                    <button class="text-button" id="viewAllTrending">
+                        Ver todos →
+                    </button>
+
+                </div>
+
+                <div class="profiles-grid" id="trendingProfiles"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RANKING
+        ========================== -->
+
+        <section class="section" id="ranking">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">🏆 TOPSPOT</span>
+
+                        <h2>
+                            Ranking destacado
+                        </h2>
+                    </div>
+
+                    <div class="ranking-filter">
+
+                        <button class="filter-button active">
+                            Todos
+                        </button>
+
+                        <button class="filter-button">
+                            Negocios
+                        </button>
+
+                        <button class="filter-button">
+                            Creadores
+                        </button>
+
+                        <button class="filter-button">
+                            Gaming
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ranking-list" id="rankingList"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ¿QUIERES SER VISTO?
+                        </span>
+
+                        <h2>
+                            Pon tu proyecto en el mapa.
+                        </h2>
+
+                        <p>
+                            Crea tu perfil en TOPSPOT y permite que
+                            más personas descubran lo que haces.
+                        </p>
+
+                    </div>
+
+                    <button class="primary-button" id="ctaCreate">
+                        Crear mi perfil
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+
+                    <span>TOP<span>SPOT</span></span>
+                </a>
+
+                <p>
+                    Descubre quién está destacando.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#inicio">Inicio</a>
+                <a href="#categorias">Categorías</a>
+                <a href="#ranking">Ranking</a>
+                <a href="#">Privacidad</a>
+
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+
+            © 2026 TOPSPOT. Todos los derechos reservados.
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         MODAL CREAR PERFIL
+    ========================== -->
+
+    <div class="modal-overlay" id="profileModal">
+
+        <div class="modal">
+
+            <button class="modal-close" id="closeModal">
+                ✕
+            </button>
+
+            <div class="modal-icon">
+                🚀
+            </div>
+
+            <span class="eyebrow">
+                PRÓXIMAMENTE
+            </span>
+
+            <h2>
+                Crea tu perfil TOPSPOT
+            </h2>
+
+            <p>
+                Estamos preparando el sistema para que puedas
+                registrar tu negocio, canal, proyecto o perfil.
+            </p>
+
+            <button class="primary-button" id="modalAccept">
+                Entendido
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
