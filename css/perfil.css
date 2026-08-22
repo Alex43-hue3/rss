@@ -685,3 +685,358 @@
     }
 
 }
+/* ==========================================
+   PERFIL PÚBLICO
+========================================== */
+
+.public-profile-body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(124,58,237,.2),
+            transparent 40%
+        ),
+        #07070b;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 30px 15px;
+
+}
+
+
+.public-profile {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    min-height: calc(100vh - 60px);
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            160deg,
+            #14131d,
+            #0c0c12
+        );
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.5);
+
+}
+
+
+.public-cover {
+
+    height: 180px;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            #8b5cf6,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #111827,
+            #312e81
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.public-content {
+
+    text-align: center;
+
+    padding: 0 30px 30px;
+
+}
+
+
+.public-avatar {
+
+    width: 100px;
+    height: 100px;
+
+    margin: -50px auto 15px;
+
+    border-radius: 50%;
+
+    border: 5px solid #121119;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #4f46e5
+        );
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    overflow: hidden;
+
+}
+
+
+.public-avatar img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.verified-line {
+
+    margin-bottom: 8px;
+
+}
+
+
+.verified-line span {
+
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(139,92,246,.1);
+
+    color: #a78bfa;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+}
+
+
+.public-content h1 {
+
+    font-size: 30px;
+
+    letter-spacing: -.05em;
+
+}
+
+
+.public-username {
+
+    color: #777687;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+}
+
+
+.public-bio {
+
+    max-width: 400px;
+
+    margin: 18px auto;
+
+    color: #aaa9b8;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.public-meta {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.public-meta span {
+
+    padding: 7px 10px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,.04);
+
+    color: #777687;
+
+    font-size: 9px;
+
+}
+
+
+.public-links {
+
+    display: grid;
+
+    gap: 10px;
+
+}
+
+
+.public-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding: 14px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.07);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .2s;
+
+}
+
+
+.public-link:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(139,92,246,.45);
+
+    background:
+        rgba(139,92,246,.1);
+
+}
+
+
+.public-footer {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.public-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-weight: 800;
+
+    font-size: 12px;
+
+}
+
+
+.public-brand .brand-symbol {
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+}
+
+
+.public-footer small {
+
+    color: #555461;
+
+    font-size: 9px;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .public-profile-body {
+
+        padding: 0;
+
+    }
+
+
+    .public-profile {
+
+        min-height: 100vh;
+
+        border-radius: 0;
+
+        border: 0;
+
+    }
+
+
+    .public-content {
+
+        padding-left: 22px;
+
+        padding-right: 22px;
+
+    }
+
+}
