@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Dashboard — NEXORA</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<aside class="dashboard-sidebar">
+
+    <a href="index.html" class="brand sidebar-brand">
+        <span class="brand-symbol">N</span>
+        NEXORA
+    </a>
+
+
+    <nav class="sidebar-nav">
+
+        <a
+            href="dashboard.html"
+            class="sidebar-link active"
+        >
+            <span>⌂</span>
+            Inicio
+        </a>
+
+
+        <a
+            href="editar-perfil.html"
+            class="sidebar-link"
+        >
+            <span>✎</span>
+            Editar perfil
+        </a>
+
+
+        <a
+            href="perfil.html"
+            class="sidebar-link"
+        >
+            <span>◉</span>
+            Ver perfil
+        </a>
+
+
+        <button
+            class="sidebar-link"
+            id="shareProfileBtn"
+        >
+            <span>↗</span>
+            Compartir
+        </button>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="mini-profile">
+
+            <div
+                class="mini-avatar"
+                id="sidebarAvatar"
+            >
+                A
+            </div>
+
+            <div>
+
+                <strong id="sidebarName">
+                    Alex Creator
+                </strong>
+
+                <span id="sidebarUsername">
+                    @alexcreator
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="logout-link"
+        >
+            ← Salir
+        </a>
+
+    </div>
+
+</aside>
+
+
+<main class="dashboard-main">
+
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <span class="eyebrow">
+                PANEL DE CONTROL
+            </span>
+
+            <h1>
+                Hola,
+                <span id="welcomeName">
+                    Alex
+                </span>
+                👋
+            </h1>
+
+            <p>
+                Esto es lo que está pasando con tu presencia digital.
+            </p>
+
+        </div>
+
+
+        <a
+            href="editar-perfil.html"
+            class="btn btn-primary"
+        >
+            ✎ Editar perfil
+        </a>
+
+    </header>
+
+
+    <section class="stats-grid">
+
+
+        <article class="stat-card">
+
+            <div class="stat-icon">◉</div>
+
+            <span>Visitas del perfil</span>
+
+            <strong id="profileViews">
+                1,284
+            </strong>
+
+            <small class="positive">
+                ↑ 24% este mes
+            </small>
+
+        </article>
+
+
+        <article class="stat-card">
+
+            <div class="stat-icon">↗</div>
+
+            <span>Clics en enlaces</span>
+
+            <strong id="linkClicks">
+                327
+            </strong>
+
+            <small class="positive">
+                ↑ 18% este mes
+            </small>
+
+        </article>
+
+
+        <article class="stat-card">
+
+            <div class="stat-icon">♢</div>
+
+            <span>Interacciones</span>
+
+            <strong>
+                89
+            </strong>
+
+            <small>
+                Últimos 30 días
+            </small>
+
+        </article>
+
+
+        <article class="stat-card">
+
+            <div class="stat-icon">⚡</div>
+
+            <span>Perfil completado</span>
+
+            <strong id="profileCompletion">
+                86%
+            </strong>
+
+            <small>
+                ¡Casi listo!
+            </small>
+
+        </article>
+
+    </section>
+
+
+    <section class="dashboard-grid">
+
+
+        <article class="dashboard-card analytics-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        ACTIVIDAD
+                    </span>
+
+                    <h2>
+                        Visitas de tu perfil
+                    </h2>
+
+                </div>
+
+                <select id="analyticsPeriod">
+
+                    <option>
+                        Últimos 7 días
+                    </option>
+
+                    <option>
+                        Últimos 30 días
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="fake-chart">
+
+                <div class="chart-grid">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <svg
+                    viewBox="0 0 700 240"
+                    preserveAspectRatio="none"
+                >
+
+                    <polyline
+                        points="
+                        0,200
+                        70,170
+                        140,185
+                        210,130
+                        280,145
+                        350,95
+                        420,115
+                        490,70
+                        560,90
+                        630,40
+                        700,55
+                        "
+                    />
+
+                </svg>
+
+
+                <div class="chart-labels">
+
+                    <span>Lun</span>
+                    <span>Mar</span>
+                    <span>Mié</span>
+                    <span>Jue</span>
+                    <span>Vie</span>
+                    <span>Sáb</span>
+                    <span>Dom</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="dashboard-card profile-status">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        TU PERFIL
+                    </span>
+
+                    <h2>
+                        Estado
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="completion-circle">
+
+                <div>
+
+                    <strong id="completionNumber">
+                        86%
+                    </strong>
+
+                    <span>
+                        completo
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-message">
+
+                <strong>
+                    Vas muy bien 🚀
+                </strong>
+
+                <p>
+                    Completa algunos detalles para que tu perfil
+                    se vea todavía más profesional.
+                </p>
+
+            </div>
+
+
+            <a
+                href="editar-perfil.html"
+                class="btn btn-outline full-btn"
+            >
+                Completar perfil
+            </a>
+
+        </article>
+
+
+    </section>
+
+
+    <section class="dashboard-grid lower-grid">
+
+
+        <article class="dashboard-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        ENLACES
+                    </span>
+
+                    <h2>
+                        Tus enlaces
+                    </h2>
+
+                </div>
+
+                <a
+                    href="editar-perfil.html"
+                    class="text-link"
+                >
+                    Administrar →
+                </a>
+
+            </div>
+
+
+            <div id="dashboardLinks" class="dashboard-links">
+
+            </div>
+
+        </article>
+
+
+        <article class="dashboard-card quick-actions">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        ACCIONES
+                    </span>
+
+                    <h2>
+                        ¿Qué quieres hacer?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="editar-perfil.html"
+                class="quick-action"
+            >
+                <span>✎</span>
+
+                <div>
+                    <strong>Editar perfil</strong>
+                    <small>Cambia tu información</small>
+                </div>
+
+                <b>→</b>
+            </a>
+
+
+            <a
+                href="perfil.html"
+                class="quick-action"
+            >
+                <span>◉</span>
+
+                <div>
+                    <strong>Ver perfil público</strong>
+                    <small>Mira cómo te ven</small>
+                </div>
+
+                <b>→</b>
+            </a>
+
+
+            <button
+                class="quick-action"
+                id="shareQuickBtn"
+            >
+                <span>↗</span>
+
+                <div>
+                    <strong>Compartir perfil</strong>
+                    <small>Envía tu enlace</small>
+                </div>
+
+                <b>→</b>
+            </button>
+
+        </article>
+
+
+    </section>
+
+
+</main>
+
+
+<div
+    class="toast"
+    id="toast"
+>
+    <span>✓</span>
+    <p id="toastText">
+        Copiado
+    </p>
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
